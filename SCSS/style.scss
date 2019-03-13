@@ -20,6 +20,10 @@ body {
     background: transparent;
     border: 2px solid #fff;
   }
+  &:hover{
+    color: #ffffff;
+
+  }
 }
 
 
@@ -144,6 +148,7 @@ body {
           &:hover{
             background: #79b530;
             color: #fff;
+            text-decoration: none;
           }
 
         }
@@ -186,91 +191,35 @@ body {
         display: flex;
         -webkit-align-items: stretch;
         align-items: stretch;
-        ul{
-          position: absolute;
-          left: 0;
-          top: 100%;
-          width: 250px;
-          background-color: #02124d;
-          margin: 0;
-          padding: 0;
-          z-index: 10;
-          display: none;
+        > a {
+          font-size: 12px;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #fff;
+          padding: 20px;
+          font-weight: 600;
         }
       }
       li {
         margin: 0;
         padding: 0;
         position: relative;
-        ul{
-          position: absolute;
-          left: 0;
-          top: 100%;
-          width: 250px;
-          background-color: #02124d;
-          margin: 0;
-          padding: 0;
-          z-index: 10;
-          display: none;
-        }
+
       }
     }
 
   }
 }
 
-
-.site-menu > ul > li ul > li,
-.site-menu > ul li ul > li {
-  width: 100%;
-}
-.site-menu > ul > li ul > li > ul,
-.site-menu > ul li ul > li > ul {
-  left: 100%;
-  top: 0;
-}
-.site-menu > ul > li ul > li:hover > a,
-.site-menu > ul li ul > li:hover > a {
-  background-color: #00b1f5;
-  color: #fff;
-}
-.site-menu > ul > li ul > li > a,
-.site-menu > ul li ul > li > a {
-  width: 100%;
-  display: inline-block;
-  padding: 7.5px 30px;
-  color: #fff;
-  text-decoration: none;
-  text-transform: capitalize;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-.site-menu > ul > li ul > li > a:hover,
-.site-menu > ul li ul > li > a:hover {
-  background-color: #00b1f5;
-  color: #fff;
-}
-.site-menu > ul > li ul > li.has-children > a:after,
-.site-menu > ul li ul > li.has-children > a:after {
-  content: '\f105';
-  font-family: FontAwesome;
-  color: #fff;
-}
-.site-menu > ul > li > a {
-      font-size: 12px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-    padding: 20px;
-    font-weight: 600;
-}
 .search-form{
 	display: flex;
     align-items: center;
     padding: 20px;
     color: #fff;
+  &:hover{
+    color: #ffffff;
+    text-decoration: none;
+  }
 }
 
 /*Banner css*/
@@ -278,16 +227,25 @@ body {
 	background-image: url('../assets/banner.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-  .banner-container{
-    padding: 180px 0;
-    background: rgba(0, 0, 0, 0.5);
+    height: 500px;
+    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
     .banner-box{
-      width: 800px;
-      margin: auto;
+     position: absolute;
       text-align: center;
       color: #fff;
     }
-  }
+    &:before{
+      content: '';
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
 }
 
 
